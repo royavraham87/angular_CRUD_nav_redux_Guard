@@ -1,0 +1,36 @@
+<h2>Cars List</h2>
+<ul>
+  <li *ngFor="let car of cars">
+    {{ car.brand }} - {{ car.year }} - {{ car.color }}
+    <button (click)="editCar(car)">Edit</button>
+    <button (click)="deleteCar(car.id)">Delete</button>
+  </li>
+</ul>
+
+<h3>Add New Car</h3>
+<form (ngSubmit)="addCar()">
+  <label>Brand:
+    <input [(ngModel)]="newCar.brand" name="brand" required />
+  </label>
+  <label>Year:
+    <input [(ngModel)]="newCar.year" name="year" required type="number" />
+  </label>
+  <label>Color:
+    <input [(ngModel)]="newCar.color" name="color" required />
+  </label>
+  <button type="submit">Add Car</button>
+</form>
+
+<h3 *ngIf="selectedCar">Edit Car</h3>
+<form *ngIf="selectedCar" (ngSubmit)="updateCar()">
+  <label>Brand:
+    <input [(ngModel)]="selectedCar.brand" name="editBrand" required />
+  </label>
+  <label>Year:
+    <input [(ngModel)]="selectedCar.year" name="editYear" required type="number" />
+  </label>
+  <label>Color:
+    <input [(ngModel)]="selectedCar.color" name="editColor" required />
+  </label>
+  <button type="submit">Update Car</button>
+</form>

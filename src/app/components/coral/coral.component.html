@@ -1,0 +1,12 @@
+<p>coral works!</p>
+
+<h2>Coral Component</h2>
+
+<!-- Two-way binding using [()] "banana in a box" -->
+<input [(ngModel)]="userInput" placeholder="Enter something" />
+
+<!-- Display the value bound to the input -->
+<p>You entered: {{ userInput }}</p>
+
+<!-- You can also trigger a method when the value changes -->
+<button (click)="showInput()">Show Input</button>

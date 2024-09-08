@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+### This app contain:
+1. angular with navigation between the components.
+2. simple CRUD that in connected to a django server.
+3. this program contain "behavior subject" - the ability to display information in a different component (just like redux). 
+4. the app has Routh Guard- the ability to protect routes in angular for the login (and a logout button).
